@@ -8,7 +8,8 @@
 
 enum custom_keycodes {
     RGB_SLD = ML_SAFE_RANGE,
-    LLOCK
+    LLOCK,
+    REPEAT
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -17,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_W,           KC_C,           KC_M,           KC_P,           KC_B,                                           KC_Z,           KC_L,           KC_O,           KC_U,           KC_J,           KC_MINUS,       
     KC_BSPC,        KC_R,           KC_S,           KC_T,           KC_H,           KC_F,                                           KC_Y,           KC_N,           KC_A,           KC_E,           KC_I,           KC_COMMA,       
     OSM(MOD_LCTL),  KC_Q,           KC_V,           KC_G,           KC_D,           KC_K,                                           KC_X,           US_AREP,        KC_QUOTE,       KC_SCLN,        KC_DOT,         KC_ENTER,       
-                                                    KC_SPACE,       OSL(1),                                         RCTL(KC_BSPC),  OSM(MOD_RSFT)
+                                                    KC_SPACE,       OSL(1),                                         RCTL(KC_BSPC),  REPEAT
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -128,6 +129,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return return_value;
     if (!process_layer_lock(keycode, record, LLOCK)) {
         return false;
+    }
+    if(record->event.pressed) {
+        if(keycode == REPEAT) {
+            if(key == KC_SPACE || key == KC_ENTER || timer_elapsed(key_timer) > 500) {
+                add_oneshot_mods(MOD_BIT(KC_LSFT));
+            } else {
+                tap_code(key);
+            }
+            return false;
+        } else {
+            key = keycode;
+            key_timer = timer_read();
+            return true;
+        }
     }
     switch (keycode) {
       case RGB_SLD:
