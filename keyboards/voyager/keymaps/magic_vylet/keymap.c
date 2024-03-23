@@ -8,31 +8,30 @@
 
 enum custom_keycodes {
     RGB_SLD = ML_SAFE_RANGE,
-    LLOCK,
-    REPEAT
+    LLOCK
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-    KC_MS_WH_LEFT,  KC_MS_WH_DOWN,  KC_MS_WH_UP,    KC_MS_BTN2,     KC_MS_BTN1,     KC_MS_WH_RIGHT,                                 KC_PSCR,        KC_CAPS,        TO(2),          TO(3),          TO(4),          KC_SYSTEM_SLEEP,
-    KC_TAB,         KC_W,           KC_C,           KC_M,           KC_P,           KC_B,                                           KC_Z,           KC_L,           KC_O,           KC_U,           KC_J,           KC_MINUS,       
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TAB,         KC_W,           KC_C,           KC_M,           KC_P,           KC_B,                                           KC_X,           KC_L,           KC_O,           KC_U,           KC_J,           KC_MINUS,       
     KC_BSPC,        KC_R,           KC_S,           KC_T,           KC_H,           KC_F,                                           KC_Y,           KC_N,           KC_A,           KC_E,           KC_I,           KC_COMMA,       
-    OSM(MOD_LCTL),  KC_Q,           KC_V,           KC_G,           KC_D,           KC_K,                                           KC_X,           US_AREP,        KC_QUOTE,       KC_SCLN,        KC_DOT,         KC_ENTER,       
-                                                    KC_SPACE,       OSL(1),                                         RCTL(KC_BSPC),  REPEAT
+    OSM(MOD_LCTL),  KC_Q,           KC_V,           KC_G,           KC_D,           KC_K,                                           KC_Z,           US_AREP,        KC_DOT,         KC_QUOTE,       KC_SCLN,        KC_ENTER,       
+                                                    KC_SPACE,       OSL(1),                                         RCTL(KC_BSPC),  OSM(MOD_RSFT)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_ESCAPE,      KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,                                        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_TILD,        KC_QUES,        KC_EQUAL,       
-    KC_BSPC,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_PLUS,        
-    KC_DELETE,      KC_GRAVE,       KC_LCBR,        KC_LBRC,        KC_LPRN,        KC_PIPE,                                        KC_BSLS,        KC_RPRN,        KC_RBRC,        KC_RCBR,        KC_SLASH,       KC_RIGHT_GUI,   
-                                                    KC_SPACE,       TO(0),                                          TO(0),          LLOCK
+    KC_ESCAPE,      KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,                                        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_SLASH,       KC_QUES,        KC_GRAVE,       
+    KC_BSPC,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TILD,        
+    KC_DELETE,      KC_MS_WH_DOWN,  KC_MS_WH_UP,    KC_MS_BTN2,     KC_MS_BTN1,     LLOCK,                                          KC_CAPS,        KC_PLUS,        KC_EQUAL,       KC_BSLS,        KC_PIPE,        KC_RIGHT_GUI,   
+                                                    KC_SPACE,       TO(0),                                          TO(0),          KC_DQUO
   ),
   [2] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_NO,          LCTL(LSFT(KC_TAB)),LALT(KC_LEFT),  KC_UP,          LALT(KC_RIGHT), KC_NO,                                          RGB_VAI,        KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,LCTL(LSFT(KC_T)),KC_NO,          
-    KC_BSPC,        LCTL(KC_TAB),   KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_NO,                                          RGB_VAD,        KC_MEDIA_PREV_TRACK,KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,LCTL(KC_T),     KC_NO,          
-    KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_F6,                                          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         KC_F12,         
-                                                    KC_SPACE,       KC_LEFT_GUI,                                    TO(0),          LCTL(KC_W)
+    KC_DELETE,      LCTL(LSFT(KC_TAB)),LALT(KC_LEFT),  KC_UP,          LALT(KC_RIGHT), KC_PSCR,                                     RGB_VAI,        KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,LCTL(LSFT(KC_T)),TO(3),          
+    KC_BSPC,        LCTL(KC_TAB),   KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_SYSTEM_SLEEP,                                RGB_VAD,        KC_MEDIA_PREV_TRACK,KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,LCTL(KC_T),     TO(4),          
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          OSM(MOD_LGUI),                                  OSM(MOD_LALT),  KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
+                                                    KC_SPACE,       TO(0),                                          TO(0),          LCTL(KC_W)
   ),
   [3] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -50,14 +49,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-const uint16_t PROGMEM combo0[] = { KC_MINUS, KC_J, COMBO_END};
-const uint16_t PROGMEM combo1[] = { KC_Q, KC_V, COMBO_END};
-const uint16_t PROGMEM combo2[] = { KC_V, KC_G, COMBO_END};
+const uint16_t PROGMEM combo0[] = { OSL(1), KC_SPACE, COMBO_END};
+const uint16_t PROGMEM combo1[] = { KC_P, KC_H, COMBO_END};
+const uint16_t PROGMEM combo2[] = { KC_L, KC_N, COMBO_END};
+const uint16_t PROGMEM combo3[] = { KC_M, KC_T, COMBO_END};
+const uint16_t PROGMEM combo4[] = { KC_O, KC_A, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo0, OSM(MOD_LALT)),
-    COMBO(combo1, LCTL(KC_Z)),
-    COMBO(combo2, LCTL(KC_X)),
+    COMBO(combo0, TO(2)),
+    COMBO(combo1, KC_LPRN),
+    COMBO(combo2, KC_RPRN),
+    COMBO(combo3, KC_LBRC),
+    COMBO(combo4, KC_RBRC),
 };
 
 
@@ -72,11 +75,11 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [1] = { {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116} },
 
-    [2] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {135,218,204}, {97,135,168}, {101,219,215}, {97,135,168}, {0,0,0}, {250,143,163}, {135,218,204}, {101,219,215}, {101,219,215}, {101,219,215}, {0,0,0}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {250,143,163}, {101,219,215}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {141,75,215}, {101,219,215}, {101,219,215}, {101,219,215}, {135,218,204}, {0,0,0}, {141,75,215}, {97,135,168}, {97,135,168}, {97,135,168}, {135,218,204}, {0,0,0}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {135,218,204} },
+    [2] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {250,143,163}, {135,218,204}, {97,135,168}, {101,219,215}, {97,135,168}, {250,143,163}, {250,143,163}, {135,218,204}, {101,219,215}, {101,219,215}, {101,219,215}, {141,75,215}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {250,143,163}, {250,143,163}, {193,230,116}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {141,75,215}, {101,219,215}, {101,219,215}, {101,219,215}, {135,218,204}, {141,75,215}, {141,75,215}, {97,135,168}, {97,135,168}, {97,135,168}, {135,218,204}, {141,75,215}, {250,143,163}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {193,230,116}, {135,218,204} },
 
-    [3] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,176,163}, {139,176,163}, {139,176,163}, {23,238,199}, {139,176,163}, {139,176,163}, {0,0,0}, {139,176,163}, {23,238,199}, {23,238,199}, {23,238,199}, {139,176,163}, {0,0,0}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,176,163}, {139,176,163}, {23,238,199}, {139,176,163}, {139,176,163}, {193,230,116}, {139,176,163}, {23,238,199}, {23,238,199}, {23,238,199}, {139,176,163}, {0,0,0}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {0,0,0}, {139,176,163}, {139,176,163} },
+    [3] = { {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {15,242,217}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116} },
 
-    [4] = { {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {139,176,163}, {193,230,116}, {139,176,163} },
+    [4] = { {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {193,230,116}, {139,176,163}, {193,230,116} },
 
 };
 
@@ -129,20 +132,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return return_value;
     if (!process_layer_lock(keycode, record, LLOCK)) {
         return false;
-    }
-    if(record->event.pressed) {
-        if(keycode == REPEAT) {
-            if(key == KC_SPACE || key == KC_ENTER || timer_elapsed(key_timer) > 500) {
-                add_oneshot_mods(MOD_BIT(KC_LSFT));
-            } else {
-                tap_code(key);
-            }
-            return false;
-        } else {
-            key = keycode;
-            key_timer = timer_read();
-            return true;
-        }
     }
     switch (keycode) {
       case RGB_SLD:

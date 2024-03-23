@@ -90,20 +90,23 @@ void process_magic_key(void)
     switch (queue(-1)) {
         // base magic key behavior
         default: record_send_string("l"); return;
-		// sfb
-        magic_case(KC_N, "y");
-        magic_case(KC_S, "c");
-        // 2u sfb
-        magic_case(KC_G, "m");
-        // xlsb
+        // lsb
         magic_case(KC_C, "k");
         magic_case(KC_K, "s");
         magic_case(KC_R, "k");
-		// ngram
+        magic_case(KC_S, "k");
+        // scissor
+        magic_case(KC_G, "h");
+        magic_case(KC_P, "t");
         magic_case(KC_QUOTE, "ll");
+		// ngram
         magic_case(KC_1 ... KC_0, ".");
     }
 }
+
+// magic_case(KC_S, "c");
+// magic_case(KC_G, "h");
+
 ////////////////////////////////////////////////////////////////////////////////
 bool magic_pr(uint16_t keycode, keyrecord_t *record, bool *return_value)
 {
