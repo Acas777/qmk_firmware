@@ -6,6 +6,14 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/zsa/qmk_firmware.svg)](https://github.com/zsa/qmk_firmware/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/zsa/qmk_firmware.svg?style=social&label=Fork)](https://github.com/zsa/qmk_firmware/)
 
+# Acas's Magic Vylet Layout
+
+<img src="img/magic_vylet.svg" alt="acas's keymap layout graphical representation" width="100%" />
+
+> Graphic made using [Keymap Drawer](/caksoylar/keymap-drawer)
+
+---
+
 This purpose of this fork is maintain a clean repo that only contains the keyboard code that we need, and as little else as possible.  This is to keep it lightweight, since we only need a couple of keyboards. This is the repo that the EZ Configurator will pull from.
 ## Documentation
 
