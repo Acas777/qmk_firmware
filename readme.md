@@ -6,11 +6,19 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/zsa/qmk_firmware.svg)](https://github.com/zsa/qmk_firmware/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/zsa/qmk_firmware.svg?style=social&label=Fork)](https://github.com/zsa/qmk_firmware/)
 
-# Acas's Magic Vylet Layout
+# Acas's QMK Config
 
-<img src="img/magic_vylet.svg" alt="acas's keymap layout graphical representation" width="100%" />
+This is my firmware config for the [Voyager](https://www.zsa.io/voyager), a split keyboard by ZSA with 52 keys. The number row goes unused, so my config is 40 keys (3x6+2).
 
-> Graphic made using [Keymap Drawer](/caksoylar/keymap-drawer)
+My config uses both a custom keymap and keyboard layout, with the latter starting out as a mod of [Wedlock](https://github.com/GGabi/wedlock) and eventually taking inspiration from [APTv3](https://github.com/Apsu/APT) and [Workman](https://workmanlayout.org/).
+
+You can read more about my keyboard layout/keymap [here](TODO). I also have it up on ZSA's website if you'd like to view it [there](https://configure.zsa.io/voyager/layouts/nPjjQ/latest), the only thing missing from there is my magic key since their QMK fork doesn't support that feature yet.
+
+This is what my layout currently looks like, hope it can give you some inspiration in making your own!
+
+<img src="img/magic_vylet_keymap.svg" alt="acas's keymap layout graphical representation" width="100%" />
+
+> Graphic made using [Keymap Drawer](/caksoylar/keymap-drawer). Color palette is [Catppuccin](https://github.com/catppuccin/catppuccin)'s Mocha flavor, I use it for everything I possibly can :)
 
 ---
 

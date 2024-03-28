@@ -28,10 +28,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [2] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_SYSTEM_SLEEP,LCTL(LSFT(KC_TAB)),LCTL(KC_W),  KC_UP,          LCTL(LSFT(KC_T)),KC_PSCR,                                       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_BSPC,        LCTL(KC_TAB),   KC_LEFT,        KC_DOWN,        KC_RIGHT,       RGB_VAI,                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_DELETE,      KC_MS_WH_DOWN,  KC_MS_WH_UP,    KC_MS_BTN2,     KC_MS_BTN1,     RGB_VAD,                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    MT(MOD_LGUI, KC_SPACE),TO(0),                                          TO(3),          KC_TRANSPARENT
+    RGB_TOG,        KC_HOME,        LCTL(LSFT(KC_T)),KC_UP,         LCTL(KC_W),     KC_PAGE_UP,                                     KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_MINUS,       
+    KC_BSPC,        KC_END,         KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_PGDN,                                        KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_COMMA,       
+    MT(MOD_LCTL, KC_DELETE), KC_MS_WH_UP, KC_MS_WH_DOWN, KC_MS_BTN2, KC_MS_BTN1,    KC_PSCR,                                        KC_F11,         KC_F12,         KC_DOT,         KC_QUOTE,       KC_SCLN,        KC_ENTER,       
+                                                    MT(MOD_LGUI, KC_SPACE), TO(0),                                  TO(3),          OSM(MOD_RSFT)
   ),
   [3] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
