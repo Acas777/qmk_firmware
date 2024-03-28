@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_ESCAPE,      KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,                                        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_SLASH,       KC_QUES,        KC_TILD,        
     KC_BSPC,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_GRAVE,       
-    KC_DELETE,      KC_MS_WH_DOWN,  KC_MS_WH_UP,    KC_MS_BTN2,     KC_MS_BTN1,     LLOCK,                                          KC_CAPS,        KC_EQUAL,       KC_PLUS,        KC_BSLS,        KC_PIPE,        KC_ENTER,       
+    KC_DELETE,      KC_MS_WH_UP,  KC_MS_WH_DOWN,    KC_MS_BTN2,     KC_MS_BTN1,     LLOCK,                                          KC_CAPS,        KC_EQUAL,       KC_PLUS,        KC_BSLS,        KC_PIPE,        KC_ENTER,       
                                                     KC_SPACE,       TO(0),                                          TO(3),          KC_DQUO
   ),
   [2] = LAYOUT_voyager(
