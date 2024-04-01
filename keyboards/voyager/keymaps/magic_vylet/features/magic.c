@@ -87,21 +87,32 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* mods
 ////////////////////////////////////////////////////////////////////////////////
 void process_magic_key(void)
 {
+    if (alt_rep_key_count >= 3) {
+        record_send_string("y"); return;
+    }
+    switch (queue(-2)) {
+        double_magic_case(KC_A, KC_L, "l");
+        double_magic_case(KC_E, KC_L, "l");
+        double_magic_case(KC_I, KC_L, "l");
+    }
     switch (queue(-1)) {
         // base magic key behavior
         default: record_send_string("y"); return;
         // lsb
         magic_case(KC_C, "k");
         magic_case(KC_R, "k");
-        magic_case(KC_S, "k");
+        magic_case(KC_S, "c");
         // scissor
+        magic_case(KC_A, "l");
+        magic_case(KC_E, "l");
+        magic_case(KC_I, "l");
         magic_case(KC_G, "h");
         magic_case(KC_P, "t");
         magic_case(KC_QUOTE, "ll");
     }
 }
 
-// magic_case(KC_S, "c");
+// magic_case(KC_S, "k");
 // magic_case(KC_G, "m");
 
 ////////////////////////////////////////////////////////////////////////////////

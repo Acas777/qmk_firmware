@@ -27,8 +27,14 @@
 <svg id="mdi:backspace-reverse-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-backspace-reverse-outline" viewBox="0 0 24 24"><path d="M5,15.59L6.41,17L10,13.41L13.59,17L15,15.59L11.41,12L15,8.41L13.59,7L10,10.59L6.41,7L5,8.41L8.59,12L5,15.59M2,3A2,2 0 0,0 0,5V19A2,2 0 0,0 2,21H17C17.69,21 18.23,20.64 18.59,20.11L24,12L18.59,3.88C18.23,3.35 17.69,3 17,3H2M2,5H17L21.72,12L17,19H2V5Z" /></svg>
 </svg>
+<svg id="mdi:brightness-5">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-brightness-5" viewBox="0 0 24 24"><path d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
+</svg>
 <svg id="mdi:brightness-6">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-brightness-6" viewBox="0 0 24 24"><path d="M12,18V6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
+</svg>
+<svg id="mdi:brightness-7">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-brightness-7" viewBox="0 0 24 24"><path d="M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" /></svg>
 </svg>
 <svg id="mdi:chevron-double-down">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-chevron-double-down" viewBox="0 0 24 24"><path d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" /></svg>
@@ -110,7 +116,7 @@ svg.keymap {
     font-size: 24px;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
-    fill: var(--text-normal);
+    fill: rgb(198, 208, 245);
     background-color: ;
     background-image: var(--logo-path);
     background-repeat: no-repeat;
@@ -134,22 +140,22 @@ text {
 text.label {
     text-anchor: start;
     paint-order: stroke;
-    fill: var(--ctp-mauve);
+    fill: rgb(203, 166, 247);
     dominant-baseline: text-before-edge;
     font-size: 28px;
 }
 
 /* Keys */
 rect.key {
-    fill: var(--background-secondary);
-    stroke: var(--divider-color);
+    fill: rgb(24, 24, 37);
+    stroke: rgb(49, 50, 68);
     stroke-width: 1;
 }
 .tap {
-    fill: var(--color-accent);
+    fill: rgb(138, 92, 245);
 }
 .hold {
-    fill: var(--color-accent);
+    fill: rgb(138, 92, 245);
     opacity: 0.75
 }
 /* styling for combo tap, and key hold/shifted label text */
@@ -166,13 +172,13 @@ text.hold {
  * Combos
  */
 rect.combo, rect.combo-separate {
-    fill: var(--background-modifier-active);
-    stroke: var(--highlight);
+    fill: rgb(35, 28, 60);
+    stroke: rgb(42, 40, 60);
     stroke-width: 1;
 }
 path.combo {
     stroke-width: 1;
-    stroke: var(--divider-color);
+    stroke: rgb(49, 50, 68);
     stroke-dasharray: 2, 2;
     fill: none;
 }
@@ -396,32 +402,32 @@ path.combo {
 <text x="360" y="90" class="combo tap">(</text>
 </g>
 <g class="combo combopos-4">
+<rect rx="4" ry="4" x="422" y="82" width="36" height="36" class="combo"/>
+<text x="440" y="100" class="combo tap"><tspan style="font-size: 75%">Alt‎</tspan></text>
+</g>
+<g class="combo combopos-5">
 <rect rx="4" ry="4" x="822" y="72" width="36" height="36" class="combo"/>
 <text x="840" y="90" class="combo tap">)</text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-6">
 <rect rx="4" ry="4" x="902" y="62" width="36" height="36" class="combo"/>
 <text x="920" y="80" class="combo tap">}</text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-7">
 <rect rx="4" ry="4" x="982" y="72" width="36" height="36" class="combo"/>
 <text x="1000" y="90" class="combo tap">]</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-8">
 <rect rx="4" ry="4" x="1062" y="92" width="36" height="36" class="combo"/>
 <text x="1080" y="110" class="combo tap">&gt;</text>
 </g>
-<g class="combo combopos-8">
-<rect rx="4" ry="4" x="342" y="152" width="36" height="36" class="combo"/>
-<use href="#mdi:microsoft-windows" xlink:href="#mdi:microsoft-windows" x="346" y="156" height="28" width="28.0" class="combo tap glyph mdi:microsoft-windows"/>
-</g>
 <g class="combo combopos-9">
-<rect rx="4" ry="4" x="822" y="152" width="36" height="36" class="combo"/>
-<text x="840" y="170" class="combo tap">Alt</text>
+<rect rx="4" ry="4" x="422" y="248" width="36" height="36" class="combo"/>
+<use href="#mdi:microsoft-windows" xlink:href="#mdi:microsoft-windows" x="426" y="252" height="28" width="28.0" class="combo tap glyph mdi:microsoft-windows"/>
 </g>
 <g class="combo combopos-10">
-<rect rx="4" ry="4" x="462" y="300" width="36" height="36" class="combo"/>
-<text x="480" y="318" class="combo tap">Nav</text>
+<rect rx="4" ry="4" x="456" y="299" width="36" height="36" class="combo"/>
+<text x="474" y="317" class="combo tap"><tspan style="font-size: 75%">Nav‎</tspan></text>
 </g>
 </g>
 </g>
@@ -707,16 +713,15 @@ path.combo {
 </g>
 <g transform="translate(40, 230)" class="key keypos-24">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:backspace-reverse-outline"/>
-<text x="0" y="32" class="key hold"><tspan style="font-size: 75%">Ctrl</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 75%">Ctrl</tspan></text>
 </g>
 <g transform="translate(120, 230)" class="key keypos-25">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:chevron-double-up" xlink:href="#mdi:chevron-double-up" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:chevron-double-up"/>
+<use href="#mdi:brightness-5" xlink:href="#mdi:brightness-5" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:brightness-5"/>
 </g>
 <g transform="translate(200, 210)" class="key keypos-26">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:chevron-double-down" xlink:href="#mdi:chevron-double-down" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:chevron-double-down"/>
+<use href="#mdi:brightness-7" xlink:href="#mdi:brightness-7" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:brightness-7"/>
 </g>
 <g transform="translate(280, 200)" class="key keypos-27">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -763,7 +768,6 @@ path.combo {
 <g transform="translate(440, 312)" class="key keypos-38">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:keyboard-space"/>
-<use href="#mdi:microsoft-windows" xlink:href="#mdi:microsoft-windows" x="-9" y="14" height="18" width="18.0" class="key hold glyph mdi:microsoft-windows"/>
 </g>
 <g transform="translate(520, 324)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -782,6 +786,18 @@ path.combo {
 </g>
 <g transform="translate(920, 288)" class="key keypos-43">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+</g>
+<g class="combo combopos-0">
+<rect rx="4" ry="4" x="422" y="82" width="36" height="36" class="combo"/>
+<text x="440" y="100" class="combo tap"><tspan style="font-size: 75%">Alt‎</tspan></text>
+</g>
+<g class="combo combopos-1">
+<rect rx="4" ry="4" x="422" y="248" width="36" height="36" class="combo"/>
+<use href="#mdi:microsoft-windows" xlink:href="#mdi:microsoft-windows" x="426" y="252" height="28" width="28.0" class="combo tap glyph mdi:microsoft-windows"/>
+</g>
+<g class="combo combopos-2">
+<rect rx="4" ry="4" x="456" y="299" width="36" height="36" class="combo"/>
+<text x="474" y="317" class="combo tap"><tspan style="font-size: 75%">Nav‎</tspan></text>
 </g>
 </g>
 </g>
