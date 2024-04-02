@@ -308,7 +308,9 @@ path.combo {
 </g>
 <g transform="translate(40, 230)" class="key keypos-24">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 75%">Ctrl</tspan></text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="0" dy="1.0em" style="font-size: 75%">Ctrl</tspan>
+</text>
 </g>
 <g transform="translate(120, 230)" class="key keypos-25">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -366,17 +368,21 @@ path.combo {
 </g>
 <g transform="translate(520, 324)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 75%">Sym‎</tspan></text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.5em" style="font-size: 75%">OSL</tspan><tspan x="0" dy="1.0em" style="font-size: 75%">Sym‎</tspan>
+</text>
 </g>
 <g transform="translate(680, 324)" class="key keypos-40">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.5em" style="font-size: 60%">Ctrl+</tspan><tspan x="0" dy="1.0em" style="font-size: 60%">Bspc</tspan>
+<tspan x="0" dy="-0.5em" style="font-size: 75%">Ctrl</tspan><tspan x="0" dy="1.0em" style="font-size: 75%">+Bs</tspan>
 </text>
 </g>
 <g transform="translate(760, 312)" class="key keypos-41">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:apple-keyboard-shift"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="0" dy="1.0em" style="font-size: 75%">Sft‎</tspan>
+</text>
 </g>
 <g transform="translate(840, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -406,7 +412,9 @@ path.combo {
 </g>
 <g class="combo combopos-5">
 <rect rx="4" ry="4" x="382" y="197" width="36" height="36" class="combo"/>
-<text x="400" y="215" class="combo tap"><tspan style="font-size: 75%">Alt‎</tspan></text>
+<text x="400" y="215" class="combo tap">
+<tspan x="400" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="400" dy="1.0em" style="font-size: 75%">Alt‎</tspan>
+</text>
 </g>
 <g class="combo combopos-6">
 <rect rx="4" ry="4" x="822" y="72" width="36" height="36" class="combo"/>
@@ -611,7 +619,9 @@ path.combo {
 </g>
 <g class="combo combopos-1">
 <rect rx="4" ry="4" x="382" y="197" width="36" height="36" class="combo"/>
-<text x="400" y="215" class="combo tap"><tspan style="font-size: 75%">Alt‎</tspan></text>
+<text x="400" y="215" class="combo tap">
+<tspan x="400" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="400" dy="1.0em" style="font-size: 75%">Alt‎</tspan>
+</text>
 </g>
 </g>
 </g>
@@ -720,7 +730,9 @@ path.combo {
 </g>
 <g transform="translate(40, 230)" class="key keypos-24">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 75%">Ctrl</tspan></text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="0" dy="1.0em" style="font-size: 75%">Ctrl</tspan>
+</text>
 </g>
 <g transform="translate(120, 230)" class="key keypos-25">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -786,7 +798,9 @@ path.combo {
 </g>
 <g transform="translate(760, 312)" class="key keypos-41">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-14" y="-14" height="28" width="28.0" class="key tap glyph mdi:apple-keyboard-shift"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="0" dy="1.0em" style="font-size: 75%">Sft‎</tspan>
+</text>
 </g>
 <g transform="translate(840, 300)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -800,7 +814,9 @@ path.combo {
 </g>
 <g class="combo combopos-1">
 <rect rx="4" ry="4" x="382" y="197" width="36" height="36" class="combo"/>
-<text x="400" y="215" class="combo tap"><tspan style="font-size: 75%">Alt‎</tspan></text>
+<text x="400" y="215" class="combo tap">
+<tspan x="400" dy="-0.5em" style="font-size: 75%">OSM</tspan><tspan x="400" dy="1.0em" style="font-size: 75%">Alt‎</tspan>
+</text>
 </g>
 </g>
 </g>
