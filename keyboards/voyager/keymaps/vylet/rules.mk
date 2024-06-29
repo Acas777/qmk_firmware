@@ -8,7 +8,7 @@ SPACE_CADET_ENABLE = no
 COMBO_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
 DEFERRED_EXEC_ENABLE = yes
-SRC += features/layer_lock.c
+LAYER_LOCK_ENABLE = yes
 
 # sequence_transform setup
 mkfile_dir := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))

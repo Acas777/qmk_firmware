@@ -1,0 +1,76 @@
+layout: {qmk_keyboard: zsa/voyager, qmk_layout: LAYOUT}
+layers:
+  Base:
+    - [Esc‎, $$mdi:chevron-double-up$$, $$mdi:chevron-double-down$$, $$mdi:mouse-right-click$$, $$mdi:mouse-left-click$$, $$mdi:mouse$$, $$mdi:apple-keyboard-option$$, $$mdi:printer$$, $$mdi:apple-keyboard-caps$$, $$mdi:lightbulb$$, $$mdi:format-color-fill$$, $$mdi:microsoft-windows$$]
+    - [$$mdi:keyboard-tab$$, W, C, M, P, B, X, L, O, U, J, -]
+    - [$$mdi:backspace-outline$$, R, S, T, H, F, Y, N, A, E, I, ","]
+    - [$$mdi:apple-keyboard-control$$, Q, V, G, D, K, Z, $$mdi:star$$, "'", ;, ., $$mdi:keyboard-return$$]
+    - $$mdi:keyboard-space$$
+    - OSL Sym‎
+    - $$mdi:backspace$$
+    - $$mdi:apple-keyboard-shift$$
+
+  Sym:
+    - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
+    - ["`", "!", "@", "#", "$", "%", "^", "&", "*", "/", "?", "~"]
+    - [{t: $$mdi:backspace-outline$$, type: trans}, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "+"]
+    - ['\', "|", '{', '[', "(", '<', '>', ")", ']', '}', "=", {t: $$mdi:keyboard-return$$, type: trans}]
+    - {t: $$mdi:keyboard-space$$, type: trans}
+    - Base
+    - {t: $$mdi:backspace$$, type: trans}
+    - $$mdi:lock$$
+
+  Nav:
+    - {t: Esc‎, type: trans}
+    - {t: $$mdi:chevron-double-up$$, type: trans}
+    - {t: $$mdi:chevron-double-down$$, type: trans}
+    - {t: $$mdi:mouse-right-click$$, type: trans}
+    - {t: $$mdi:mouse-left-click$$, type: trans}
+    - {t: $$mdi:mouse$$, type: trans}
+    - {t: OSM Alt‎, type: trans}
+    - {t: $$mdi:printer$$, type: trans}
+    - {t: $$mdi:apple-keyboard-caps$$, type: trans}
+    - {t: $$mdi:lightbulb$$, type: trans}
+    - {t: $$mdi:format-color-fill$$, type: trans}
+    - {t: $$mdi:microsoft-windows$$, type: trans}
+    - [{t: Tab‎, type: trans}, $$mdi:apple-keyboard-option$$, Home, $$mdi:arrow-up-bold$$, End‎, PgUp]
+    - {t: X, type: trans}
+    - {t: L, type: trans}
+    - {t: O, type: trans}
+    - {t: U, type: trans}
+    - {t: J, type: trans}
+    - {t: -, type: trans}
+    - [{t: $$mdi:backspace-outline$$, type: trans}, Del‎, $$mdi:arrow-left-bold$$, $$mdi:arrow-down-bold$$, $$mdi:arrow-right-bold$$, PgDn]
+    - {t: Y, type: trans}
+    - {t: N, type: trans}
+    - {t: A, type: trans}
+    - {t: E, type: trans}
+    - {t: I, type: trans}
+    - {t: ",", type: trans}
+    - [{t: $$mdi:apple-keyboard-control$$, type: trans}, $$mdi:brightness-5$$, $$mdi:brightness-7$$, $$mdi:lightbulb-on-outline$$, $$mdi:lightbulb-on$$, $$mdi:animation$$]
+    - {t: Z, type: trans}
+    - {t: $$mdi:star$$, type: trans}
+    - {t: "'", type: trans}
+    - {t: ;, type: trans}
+    - {t: ., type: trans}
+    - {t: $$mdi:keyboard-return$$, type: trans}
+    - $$mdi:apple-keyboard-shift$$
+    - $$mdi:microsoft-windows$$
+    - {t: $$mdi:backspace$$, type: trans}
+    - {t: $$mdi:apple-keyboard-shift$$, type: trans}
+
+  Game:
+    - [Esc‎, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, $$mdi:microsoft-windows$$]
+    - [$$mdi:keyboard-tab$$, Q, W, E, R, T, Y, U, I, O, P, -]
+    - [$$mdi:apple-keyboard-shift$$, A, S, D, F, G, H, J, K, L, ;, "'"]
+    - [$$mdi:apple-keyboard-control$$, Z, X, C, V, B, N, M, ",", ., /, $$mdi:keyboard-return$$]
+    - $$mdi:keyboard-space$$
+    - Shift
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:backspace-outline$$
+
+combos:
+  - {p: [15, 27], k: Nav‎, l: [Base]}
+  - {p: [15, 27], k: Base, l: [Nav]}
+  - {p: [12, 24], k: Game, l: [Base]}
+  - {p: [12, 24], k: Base, l: [Game]}

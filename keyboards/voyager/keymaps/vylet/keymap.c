@@ -1,7 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 #define MOON_LED_LEVEL LED_LEVEL
-#include "features/layer_lock.h"
 #include "sequence_transform/sequence_transform.h"
 
 /// qmk compile -kb voyager -km vylet
@@ -15,7 +14,6 @@ enum custom_keycodes {
     US_QUOT_S,
     RGB_SLD,
     HSV_193_230_116,
-    LLOCK
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -31,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRAVE,       KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,                                        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_SLASH,       KC_QUES,        KC_TILD,        
     KC_TRNS,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_PLUS,        
     KC_BSLS,        KC_PIPE,        KC_LCBR,        KC_LBRC,        KC_LPRN,        KC_LABK,                                        KC_RABK,        KC_RPRN,        KC_RBRC,        KC_RCBR,        KC_EQUAL,       KC_TRNS, 
-                                                                                    KC_TRNS,        TO(0),          KC_TRNS,        LLOCK
+                                                                                    KC_TRNS,        TO(0),          KC_TRNS,        QK_LLCK
   ),
   [2] = LAYOUT_voyager(
     KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,          
@@ -62,9 +60,7 @@ combo_t key_combos[COMBO_COUNT] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_sequence_transform(keycode, record, US_MAG1))
-        return false;
-    if (!process_layer_lock(keycode, record, LLOCK)) {
+    if (!process_sequence_transform(keycode, record, US_MAG1)) {
         return false;
     }
     switch (keycode) {
