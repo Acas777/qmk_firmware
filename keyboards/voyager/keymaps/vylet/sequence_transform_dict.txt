@@ -1,0 +1,42 @@
+// 👆👍★✪
+// ↻⇑
+
+//✪       ⇒ ↻
+∀✪       ⇒ ∀⑴
+
+∂n       ⇒ ∂n
+∂★       ⇒ ∂⑴
+
+∂∂★       ⇒ ∂∂⑴
+∂∂★d       ⇒ 2024-04-⑶⑵
+
+// default output
+★      ⇒ I
+
+// full scissor bigram (FSB)
+c★      ⇒ ck
+'★      ⇒ 'l
+l★      ⇒ ll
+
+// half scissor bigram (HSB)
+g★      ⇒ gh
+p★      ⇒ pt
+r★      ⇒ rk
+
+// same finger bigram (SFB)
+s★      ⇒ sc
+w★      ⇒ wr
+
+// lateral stretch bigram (LSB)
+f★      ⇒ ft
+m★      ⇒ mb
+
+// half scissor LSB
+b★      ⇒ bt
+a★      ⇒ ax
+e★      ⇒ ex
+i★      ⇒ ix
+
+// slides (i don't use these rules)
+o★      ⇒ oa
+u★      ⇒ ue

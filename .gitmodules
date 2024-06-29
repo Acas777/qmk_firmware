@@ -25,3 +25,6 @@
 	path = lib/lvgl
 	url = https://github.com/qmk/lvgl.git
 	branch = release/v8.2
+[submodule "keyboards/voyager/keymaps/vylet/sequence_transform"]
+	path = keyboards/voyager/keymaps/vylet/sequence_transform
+	url = https://github.com/ikcelaks/qmk_sequence_transform.git
