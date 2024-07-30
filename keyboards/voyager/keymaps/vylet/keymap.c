@@ -18,7 +18,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-    KC_ESCAPE,      KC_MS_WH_UP,    KC_MS_WH_DOWN,  KC_MS_BTN2,     KC_MS_BTN1,     KC_MS_BTN3,                                     OSM(MOD_LALT),  KC_PSCR,        KC_CAPS,        RGB_TOG,        HSV_193_230_116,OSM(MOD_RGUI),  
+    KC_ESCAPE,      OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  KC_PSCR,                                        KC_CAPS,        OSM(MOD_RSFT),  OSM(MOD_RCTL),  OSM(MOD_RALT),  OSM(MOD_RGUI),  RGB_TOG,        
     KC_TAB,         KC_W,           KC_C,           KC_M,           KC_P,           KC_B,                                           KC_X,           KC_L,           KC_O,           KC_U,           KC_J,           KC_MINUS,       
     KC_BSPC,        KC_R,           KC_S,           KC_T,           KC_H,           KC_F,                                           KC_Y,           KC_N,           KC_A,           KC_E,           KC_I,           KC_COMMA,       
     OSM(MOD_LCTL),  KC_Q,           KC_V,           KC_G,           KC_D,           KC_K,                                           KC_Z,           US_MAG1,        KC_QUOTE,       KC_SCLN,        KC_DOT,         KC_ENTER,       
@@ -33,30 +33,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [2] = LAYOUT_voyager(
     KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,          
-    KC_TRNS,        OSM(MOD_LALT),  KC_HOME,        KC_UP,          KC_END,         KC_PAGE_UP,                                     KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       
+    KC_TRNS,        HSV_193_230_116,KC_HOME,        KC_UP,          KC_END,         KC_PAGE_UP,                                     KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       
     KC_TRNS,        KC_DELETE,      KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_PGDN,                                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       
     KC_TRNS,        RGB_SAD,        RGB_SAI,        RGB_VAD,        RGB_VAI,        RGB_MODE_FORWARD,                               KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,       
                                                                                     OSM(MOD_LSFT),  OSM(MOD_LGUI),  KC_TRNS,        KC_TRNS
   ),
   [3] = LAYOUT_voyager(
-    KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_RIGHT_GUI,          
+    KC_TILD,        KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,                                           KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRNS, 
+    KC_GRAVE,       KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,                                           KC_T,           KC_M,           KC_UP,          KC_Y,           KC_P,           KC_NO, 
+    KC_NO,          KC_LEFT_SHIFT,  KC_A,           KC_S,           KC_D,           KC_F,                                           KC_G,           KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_I,           KC_NO,          
+    KC_NO,          KC_LEFT_CTRL,   KC_Z,           KC_X,           KC_C,           KC_V,                                           KC_B,           KC_H,           KC_J,           KC_K,           KC_L,           KC_ENTER,       
+                                                    KC_SPACE,       KC_BSPC,                                        KC_RIGHT_GUI,   KC_RIGHT_SHIFT
+  ),
+  [4] = LAYOUT_voyager(
+    KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_RIGHT_GUI,   
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,                                           KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_MINUS,       
     KC_LEFT_SHIFT,  KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOTE,       
     KC_LEFT_CTRL,   KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_ENTER,       
-                                                                                    KC_SPACE,       KC_LEFT_SHIFT,  KC_LEFT_ALT,    KC_BSPC
+                                                    KC_SPACE,       KC_LEFT_SHIFT,                                  KC_LEFT_ALT,    KC_BSPC
   ),
 };
 
-const uint16_t PROGMEM combo0[] = { KC_M, KC_T, COMBO_END};
-const uint16_t PROGMEM combo1[] = { KC_UP, KC_DOWN, COMBO_END};
-const uint16_t PROGMEM combo2[] = { KC_TAB, KC_BSPC, COMBO_END};
-const uint16_t PROGMEM combo3[] = { KC_LEFT_SHIFT, KC_TAB, COMBO_END};
+const uint16_t PROGMEM combo0[] = { KC_B, KC_F, COMBO_END};
+const uint16_t PROGMEM combo1[] = { KC_PAGE_UP, KC_PGDN, COMBO_END};
+const uint16_t PROGMEM combo2[] = { KC_ESCAPE, KC_TAB, COMBO_END};
+const uint16_t PROGMEM combo3[] = { KC_GRAVE, KC_TILD, COMBO_END};
+const uint16_t PROGMEM combo4[] = { OSM(MOD_LCTL), KC_BSPC, COMBO_END};
+const uint16_t PROGMEM combo5[] = { KC_LEFT_SHIFT, KC_LEFT_CTRL, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, TO(2)),
     COMBO(combo1, TO(0)),
     COMBO(combo2, TO(3)),
     COMBO(combo3, TO(0)),
+    COMBO(combo4, TO(4)),
+    COMBO(combo5, TO(0)),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
